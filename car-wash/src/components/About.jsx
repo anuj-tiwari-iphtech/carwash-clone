@@ -9,17 +9,15 @@ function About() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true); 
-        }
+        setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 } 
+      { threshold: 0.5 }
     );
-
+  
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
+  
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
