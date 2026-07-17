@@ -125,7 +125,7 @@ body{
   position:relative;
   display:flex;
   align-items:center;
-
+  background-attachment: fixed;
 }
 
 .hero-card{
@@ -209,13 +209,6 @@ body{
   color: #000000; 
   border-color: #3b62d6; 
 }
-
-  .hero-card{
-      width:90%;
-      max-width: 450px;
-      margin: auto;
-      padding:30px;
-  }
 
  
 @media (max-width: 768px) {

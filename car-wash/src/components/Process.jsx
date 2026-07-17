@@ -41,23 +41,21 @@ function Process() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true,
+      once: false,
+      mirror: true,
     });
   }, []);
 
   return (
     <section className="process-section">
-      {/* Background Overlay */}
       <div className="process-overlay"></div>
 
       <div className="process-container">
-        {/* Section Header */}
         <div className="process-header" data-aos="fade-down">
           <h2>Our Process</h2>
           <p>We know your time is valuable</p>
         </div>
 
-        {/* Process Steps Grid */}
         <div className="process-grid">
           {processSteps.map((step, index) => (
             <div
@@ -66,7 +64,6 @@ function Process() {
               data-aos="fade-up"
               data-aos-delay={index * 150}
             >
-              {/* Circular Border with Image inside */}
               <div className="process-img-box">
                 <img src={step.image} alt={step.title} />
               </div>

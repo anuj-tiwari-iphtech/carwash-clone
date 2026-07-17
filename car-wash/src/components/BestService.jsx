@@ -17,25 +17,23 @@ function BestServices() {
   const row2Ref = useRef(null);
 
   useEffect(() => {
-    
     const observer1 = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setRow1Visible(true);
+        setRow1Visible(entry.isIntersecting);
       },
       { threshold: 0.25 }
     );
-
-    
+  
     const observer2 = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setRow2Visible(true);
+        setRow2Visible(entry.isIntersecting);
       },
       { threshold: 0.25 }
     );
-
+  
     if (sectionRef.current) observer1.observe(sectionRef.current);
     if (row2Ref.current) observer2.observe(row2Ref.current);
-
+  
     return () => {
       if (sectionRef.current) observer1.unobserve(sectionRef.current);
       if (row2Ref.current) observer2.unobserve(row2Ref.current);
