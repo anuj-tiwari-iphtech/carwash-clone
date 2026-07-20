@@ -2,6 +2,8 @@ import { useState } from "react";
 import logo from "../assets/car-wash-logo-2.png";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 
+import "../Css/navbar.css"
+
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -13,7 +15,7 @@ function Navbar() {
                     <img src={logo} alt="Logo" />
                 </div>
 
-               
+                <div className="nav-menu-wrapper">
                 <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
                     <li>
                         <a href="#" onClick={() => setMenuOpen(false)}>Home</a>
@@ -43,6 +45,7 @@ function Navbar() {
                         <a href="#" onClick={() => setMenuOpen(false)}>Contact Us</a>
                     </li>
                 </ul>
+                </div>
 
                
                 <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>

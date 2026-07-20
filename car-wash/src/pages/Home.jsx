@@ -10,7 +10,10 @@ import QualityService from "../components/QualityService"
 import Testimonails from "../components/Testimonails"
 import ContactBanner from "../components/ContactBanner"
 import MapSection from "../components/MapSection"
-
+import Footer from "../components/Footer"
+import TeamSection from "../components/TeamSection"
+import FaqSection from "../components/FaqSection"
+import ContactSection from "../components/ContactSection"
 
 
 function Home(){
@@ -18,7 +21,7 @@ function Home(){
     return(
         <div>
             <Navbar/>
-            <Hero className="main-container"/>
+            <Hero/>
             <Services/>
             <About/>
             <Process/>
@@ -27,7 +30,11 @@ function Home(){
             <QualityService/>
             <Testimonails/>
             <ContactBanner/>
+            <FaqSection/>
+            <TeamSection/>
+            <ContactSection/>
             <MapSection/>
+            <Footer/>
         </div>
     )
 }

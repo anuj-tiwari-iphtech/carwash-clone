@@ -21,14 +21,14 @@ function BestServices() {
       ([entry]) => {
         setRow1Visible(entry.isIntersecting);
       },
-      { threshold: 0.25 }
+      { threshold: 0.1 }
     );
   
     const observer2 = new IntersectionObserver(
       ([entry]) => {
         setRow2Visible(entry.isIntersecting);
       },
-      { threshold: 0.25 }
+      { threshold: 0.1 }
     );
   
     if (sectionRef.current) observer1.observe(sectionRef.current);

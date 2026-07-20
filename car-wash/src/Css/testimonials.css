@@ -11,8 +11,8 @@
 
 .testimonials-title  {
     text-align: center;
-    font-size: 60px;
-    font-weight: 600;
+    font-size: 65px;
+    font-weight: 550;
     color: #111111;
     margin-bottom: 70px;
     opacity: 0;
@@ -48,12 +48,12 @@
 
 .testimonials-section.animate-testimonials .card-1,
 .testimonials-section.animate-testimonials .card-2 {
-    transition-delay: 0.1s;
+    transition-delay: 0.5s;
 }
 
 .testimonials-section.animate-testimonials .card-3,
 .testimonials-section.animate-testimonials .card-4 {
-    transition-delay: 0.45s;
+    transition-delay: 1s;
 }
 
 .quote-icon {
@@ -66,14 +66,14 @@
 }
 
 .testimonial-text {
-    font-size: 17px;
+    font-size: 16px;
     color: #333333;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .testimonial-author {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     color: #111111;
 }
