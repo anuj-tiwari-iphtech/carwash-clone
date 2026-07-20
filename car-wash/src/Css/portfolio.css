@@ -138,32 +138,32 @@
 
 
 @media (max-width: 992px) {
-    .portfolio-card {
-      min-width: calc(50% - 10px); 
-      height: 340px;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .portfolio-title {
-      font-size: 32px;
-    }
-  
-    .portfolio-track {
-      gap: 15px;
-    }
-  
-    .portfolio-card {
-      min-width: 82vw;
-      height: 350px;
-    }
-  
-    .slider-btn {
-      width: 38px;
-      height: 38px;
-      font-size: 22px;
-    }
-  
-    .prev-btn { left: 5px; }
-    .next-btn { right: 5px; }
-  }
+.portfolio-card {
+    min-width: calc(50% - 10px); 
+    height: 340px;
+}
+}
+
+@media (max-width: 600px) {
+.portfolio-title {
+    font-size: 32px;
+}
+
+.portfolio-track {
+    gap: 15px;
+}
+
+.portfolio-card {
+    min-width: 82vw;
+    height: 350px;
+}
+
+.slider-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+}
+
+.prev-btn { left: 5px; }
+.next-btn { right: 5px; }
+}

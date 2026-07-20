@@ -1,25 +1,25 @@
 .map-section {
-    width: 100%;
-    background-color: #f4f4f4;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .map-container {
-    width: 100%;
-    height: 450px;
-    line-height: 0;
-  }
-  
-  .map-container iframe {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 0;
+  margin: 0;
+}
 
-  @media (max-width: 768px) {
-    .map-container {
-      height: 350px;
-    }
+.map-container {
+  width: 100%;
+  height: 450px;
+  line-height: 0;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 350px;
   }
+}

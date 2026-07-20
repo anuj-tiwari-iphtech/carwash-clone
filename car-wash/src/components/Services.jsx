@@ -26,7 +26,7 @@ function Services() {
         data-aos="zoom-in"
         data-aos-delay="100"
       >
-        <img className="Service-Icon" src={ServiceIcon1} alt="Contactless Washing" />
+        <img className="Service-Icon" src={ServiceIcon1} alt="Contactless Washing" data-aos="icon-flip" data-aos-delay="150"   />
         <h3>Contactless Washing</h3>
         <p>Sample text. Click to select the <br/> Text Element.</p>
       </div>
@@ -36,7 +36,7 @@ function Services() {
         data-aos="zoom-in"
         data-aos-delay="200"
       >
-        <img className="Service-Icon" src={ServiceIcon2} alt="Safety Materials" />
+        <img className="Service-Icon" src={ServiceIcon2} alt="Safety Materials" data-aos="icon-flip" data-aos-delay="150" />
         <h3>Safety Materials</h3>
         <p>Sample text. Click to select the <br/> Text Element.</p>
       </div>
@@ -46,7 +46,7 @@ function Services() {
         data-aos="zoom-in"
         data-aos-delay="300"
       >
-        <img className="Service-Icon" src={ServiceIcon3} alt="Modern Equipment" />
+        <img className="Service-Icon" src={ServiceIcon3} alt="Modern Equipment" data-aos="icon-flip" data-aos-delay="150"/>
         <h3>Modern Equipment</h3>
         <p>Sample text. Click to select the <br/> Text Element.</p>
       </div>
@@ -56,7 +56,7 @@ function Services() {
         data-aos="zoom-in"
         data-aos-delay="400"
         >
-        <img className="Service-Icon" src={ServiceIcon4} alt="Extensive Cleaning" />
+        <img className="Service-Icon" src={ServiceIcon4} alt="Extensive Cleaning" data-aos="icon-flip" data-aos-delay="150"/>
             <h3>Extensive Cleaning</h3>
             <p>Sample text. Click to select the <br/> Text Element.</p>
       </div>
