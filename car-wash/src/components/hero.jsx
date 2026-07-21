@@ -13,7 +13,7 @@ function Hero(){
         <div className="hero-card">
             
 
-                <p className="sun-title">WELCOME TO</p>
+                <p className="sub-title">WELCOME TO</p>
                <br/>
                 <h1>Car Wash</h1>
 

@@ -31,7 +31,13 @@ function ContactSection(){
 
     const handleSummit = (e) => {
         e.preventDefault();
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+    
+        console.log(data);
         alert("Message Sent")
+
+        e.target.reset();
     }
 
     return(
@@ -46,22 +52,22 @@ function ContactSection(){
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Name</label>
-                                <input type="text" placeholder="Enter your Nmae" required/>
+                                <input type="text" name="name:" placeholder="Enter your Nmae" required/>
                             </div>
                             <div className="form-group">
                                 <label>Email</label>
-                                <input type="email" placeholder="Enter a valid email address" required/>
+                                <input type="email" name="email" placeholder="Enter a valid email address" required/>
                             </div>
                         </div>
     
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Phone</label>
-                                <input type="tel" placeholder="Enter your phone (e.g. +14155552678)" required/>
+                                <input type="tel" name="Phone" placeholder="Enter your phone (e.g. +14155552678)" required/>
                             </div>
                             <div className="form-group">
                                 <label>Subject</label>
-                                <input type="text" required/>
+                                <input type="text"  name="subject" required/>
                             </div>
                         </div>
     
@@ -70,7 +76,7 @@ function ContactSection(){
                             <textarea rows="4" ></textarea>
                         </div>
     
-                        <button type="submit" className="submit-btn">
+                        <button type="submit" name="msg" className="submit-btn">
                             SEND MESSAGE
                         </button>
                     </form>

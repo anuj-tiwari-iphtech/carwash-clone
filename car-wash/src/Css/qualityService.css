@@ -43,14 +43,16 @@
 }
 
 .section-title {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 550;
+    font-family: Roboto, sans-serif;
     color: #111111;
     margin-bottom: 20px;
 }
 
 .section-text {
     font-size: 16px;
+    font-family: "Open-sans", sans-serif;
     color: #555555;
     line-height: 1.6;
     margin-bottom: 25px;
@@ -59,8 +61,8 @@
 .primary-btn {
     background-color: #3b62d6;
     color: #ffffff;
-    border: none;
-    padding: 12px 28px;
+    border: 2px solid blue;
+    padding: 16px 28px;
     font-size: 13px;
     font-weight: 700;
     border-radius: 8px;
@@ -69,6 +71,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+
 .primary-btn:hover {
     background-color: #ffffff;
     color: #000000; 
@@ -76,6 +79,7 @@
 
 .freepik-text {
     font-size: 16px;
+    font-family: "Open-sans", sans-serif;
     color: #777;
     margin-top: 30px;
 }
@@ -99,6 +103,7 @@
 
 .feature-list li {
     font-size: 16px;
+    font-family: "Open sans", sans-serif;
     color: #333333;
     margin-bottom: 12px;
     line-height: 1.5;
@@ -125,8 +130,8 @@
 }
 
 .image-box {
-    width: 280px;
-    height: 360px;
+    width: 350px;
+    height: 450px;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
