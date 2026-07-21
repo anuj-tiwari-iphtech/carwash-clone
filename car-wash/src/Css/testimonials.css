@@ -1,6 +1,6 @@
 .testimonials-section {
     background-color: #f4f4f4;
-    padding: 100px 20px 120px 20px;
+    padding: 80px 20px 140px 20px;
     overflow: hidden;
 }
 
@@ -12,6 +12,7 @@
 .testimonials-title  {
     text-align: center;
     font-size: 65px;
+    font-family: Roboto, sans-serif;
     font-weight: 550;
     color: #111111;
     margin-bottom: 70px;
@@ -67,6 +68,7 @@
 
 .testimonial-text {
     font-size: 16px;
+    font-family: "Open-sans", sans-serif;
     color: #333333;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -74,6 +76,7 @@
 
 .testimonial-author {
     font-size: 20px;
+    font-family: Roboto, sans-serif;
     font-weight: 700;
     color: #111111;
 }

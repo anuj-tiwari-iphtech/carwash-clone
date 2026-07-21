@@ -2,7 +2,7 @@
 .footer-section {
     background-color: #3b62d6; 
     color: #ffffff;
-    padding: 100px 20px 30px 20px;
+    padding: 110px 20px 30px 20px;
     font-family: Arial, sans-serif;
 }
 
@@ -28,6 +28,7 @@
 .brand-title {
     font-size: 24px;
     font-weight: 700;
+    font-family: Roboto, sans-serif;
     margin-bottom: 20px;
     color: #ffffff;
 }
@@ -35,6 +36,7 @@
 .brand-desc {
     font-size: 16px;
     line-height: 1.6;
+    font-family: "Open-sans", sans-serif;
     color: #e0e6fa;
     margin-bottom: 25px;
 }
@@ -65,6 +67,7 @@
 .footer-heading {
     font-size: 24px;
     font-weight: 700;
+    font-family: Roboto, sans-serif;
     margin-bottom: 25px;
     color: #ffffff;
 }
@@ -76,13 +79,14 @@
 }
 
 .footer-links li {
-    margin-bottom: 14px;
+    margin-bottom: 24px;
 }
 
 .footer-links a {
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
+    font-family: "Open-sans", sans-serif;
     letter-spacing: 0.8px;
     transition: opacity 0.3s ease;
 }
@@ -106,6 +110,7 @@
 .copyright-text {
     font-size: 14px;
     color: #e0e6fa;
+    padding-bottom: 30px;
     margin: 0;
 }
 

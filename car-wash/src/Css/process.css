@@ -1,8 +1,11 @@
 
 .process-section {
   position: relative;
+  
   background: url("../assets/bg-2.jpg") no-repeat center center / cover;
-  padding: 100px 20px;
+  background-attachment: fixed;
+  padding: 70px 20px;
+  padding-bottom: 90px;
   color: #ffffff;
   text-align: center;
   overflow: hidden;
@@ -29,12 +32,14 @@
 .process-header h2 {
   font-size: 60px;
   font-weight: 700;
-  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+  margin-bottom: 16px;
   letter-spacing: 0.5px;
 }
 
 .process-header p {
   font-size: 16px;
+  font-family: "Open Sans", sans-serif;
   color: #dddddd;
   margin-bottom: 60px;
   font-style: normal;
@@ -88,6 +93,7 @@
 .process-card h3 {
   font-size: 20px;
   font-weight: 600;
+  font-family: Roboto, sans-serif;
   margin-bottom: 12px;
   color: #ffffff;
 }
@@ -95,6 +101,7 @@
 
 .process-card p {
   font-size: 16px;
+  font-family: "Open Sans", sans-serif;
   font-style: italic;
   color: #cccccc;
   line-height: 1.5;
@@ -125,16 +132,16 @@
   }
 
   .process-header h2 {
-    font-size: 28px;
+    font-size: 40px;
   }
 
   .process-img-box {
-    width: 75px;
-    height: 75px;
-    padding: 15px;
+    width: 90px;
+    height: 90px;
+    padding: 10px;
   }
 
   .process-card h3 {
-    font-size: 18px;
+    font-size: 25px;
   }
 }

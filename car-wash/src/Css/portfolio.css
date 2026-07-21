@@ -1,6 +1,6 @@
 .portfolio-section {
     background-color: #333333;
-    padding: 80px 20px;
+    padding: 70px 20px;
     color: #ffffff;
     overflow: hidden;
 }
@@ -13,7 +13,8 @@
 
 .portfolio-title {
     font-size: 66px;
-    font-weight: 600;
+    font-weight: 550;
+    font-family: Roboto, sans-serif;
     margin-bottom: 15px;
     text-align: left;
     opacity: 0;
@@ -24,9 +25,9 @@
 
 .portfolio-subtitle {
     font-size: 16px;
-    color: #cccccc;
+    color: #ffffff;
     margin-bottom: 40px;
-
+    font-family: "Open sans", sans-serif;
     text-align: left;
 
 
@@ -60,8 +61,8 @@
 }
 
 .portfolio-card {
-    width: calc(25% - 15px); 
-    height: 380px;
+    width: calc(25% - 20px); 
+    height: 400px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -154,8 +155,8 @@
 }
 
 .portfolio-card {
-    min-width: 82vw;
-    height: 350px;
+    min-width: 90vw;
+    height: 390px;
 }
 
 .slider-btn {
