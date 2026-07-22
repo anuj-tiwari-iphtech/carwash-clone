@@ -1,0 +1,175 @@
+
+.best-services-section {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #f4f4f4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .best-services-container {
+    width: 100%;
+    max-width: 1050px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .best-services-image-box {
+    width: 100%;
+    max-width: 540px;
+    height: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateX(-100px); 
+    will-change: transform, opacity;
+  }
+  
+  .best-services-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+
+  .best-services-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .best-services-title {
+    font-size: 48px;
+    font-weight: 550;
+    font-family: Roboto, sans-serif;
+    color: #111111;
+    margin: 0 0 18px 0;
+    line-height: 1.2;
+    opacity: 0;
+    transform: scale(0.3); 
+    will-change: transform, opacity;
+  }
+  
+
+  .best-services-desc {
+    font-size: 16px;
+    font-family: "Open-sans", sans-serif;
+    color: #555555;
+    margin-top: 10px;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    opacity: 0;
+    transform: translateX(60px) scale(0.9); 
+    will-change: transform, opacity;
+  }
+
+  .best-services-phone {
+    font-size: 36px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #111111;
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateX(60px) scale(0.9);
+    will-change: transform, opacity;
+  }
+  
+  .best-services-phone span {
+    color: #2b60de;
+  }
+  
+  .best-services-btn {
+    background-color: #2b60de;
+    color: #ffffff;
+    border: none;
+    padding: 22px 48px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-color: 1px solid #2b60de;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    opacity: 0;
+    transform: translateX(60px) scale(0.9);
+    will-change: transform, opacity;
+  }
+  
+
+  .best-services-btn:hover {
+    background-color: #ffffff;
+    color: #2b60de;
+    border-color: 2px solid #2b60de;
+    transform: translateY(-2px);
+  }
+  
+  .animate-from-left {
+    animation: slideFromLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  
+  @keyframes slideFromLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-from-inside {
+    animation: zoomFromInside 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards;
+  }
+  
+  @keyframes zoomFromInside {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-from-right-inside {
+    animation: slideRightInside 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.3s forwards;
+  }
+
+  .animate-from-right-inside-delayed {
+    animation: slideRightInside 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.45s forwards;
+  }
+  
+
+  .animate-from-right-inside-btn {
+    animation: slideRightInside 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.6s forwards;
+  }
+  
+  @keyframes slideRightInside {
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+  
+
+  @media (max-width: 900px) {
+    .best-services-container {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+  
+    .best-services-image-box {
+      max-width: 100%;
+      height: 320px;
+    }
+  
+    .best-services-title {
+      font-size: 2rem;
+    }
+  
+    .best-services-phone {
+      font-size: 1.25rem;
+    }
+  }
