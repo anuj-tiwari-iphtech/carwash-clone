@@ -1,0 +1,156 @@
+.team-header-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    overflow: hidden; 
+  }
+  
+  .team-header-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 700px;
+  }
+  
+  .blue-card-bg {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 89%;
+    height: 629px;
+    background-color: #2b60de; 
+    border-radius: 20px;
+    z-index: 1;
+    opacity: 0;
+  }
+  
+
+  .main-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 629px;
+    z-index: 2;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+  }
+  
+  .main-team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .team-text-box {
+    position: relative;
+    left: 25%;
+    top: 72%;
+    width: 70%;
+    background-color: #ffffff;
+    padding: 40px 40px;
+    border-radius: 20px;
+    z-index: 3;
+
+    opacity: 0;
+  }
+  
+  .team-title {
+    font-size: 90px;
+    font-weight: 800;
+    font-family: Roboto, sans-serif;
+    color: #000000;
+    margin: 0;
+    line-height: 1.1;
+  }
+  
+  .team-subtitle {
+    margin-top: 15px;
+    font-size: 18px;
+    font-family: "Open sans", sans-serif;
+    color: #666666;
+  }
+  
+  .team-subtitle a {
+    color: #000000;
+    text-decoration: underline;
+  }
+  
+  
+  /* Blue Card - Top Animation */
+  .animate-top {
+    animation: slideFromTop 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  
+  /* Main Image - Left Animation */
+  .animate-left {
+    animation: slideFromLeft 0.9s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards;
+  }
+  
+  /* Text Box - Right Animation */
+  .animate-right {
+    animation: slideFromRight 0.9s cubic-bezier(0.25, 1, 0.5, 1) 0.4s forwards;
+  }
+  
+  @keyframes slideFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-120px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-150px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(150px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Mobile Layout */
+  @media (max-width: 768px) {
+    .team-header-container {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .blue-card-bg, 
+    .main-image-wrapper, 
+    .team-text-box {
+      position: relative;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  
+    .team-text-box {
+      margin-top: -30px;
+      padding: 20px;
+    }
+  }

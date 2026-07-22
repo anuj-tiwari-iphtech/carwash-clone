@@ -1,0 +1,139 @@
+
+.wash-services-section {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .wash-services-container {
+    width: 100%;
+    max-width: 1100px;
+  }
+  
+  .wash-services-heading {
+    font-size: 65px;
+    font-weight: 550;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    color: #111111;
+    margin-bottom: 45px;
+    opacity: 0;
+  }
+  
+  .wash-tabs-header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  .wash-tab-btn {
+    background-color: #efefef;
+    color: #222222;
+    border: none;
+    padding: 16px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Open-sans", sans-serif;
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+  }
+  
+  .wash-tab-btn:hover {
+    color: #ffffff;
+    background-color: #2b60de;
+  }
+  
+  .wash-tab-btn.active {
+    background-color: #2b60de; 
+    color: #ffffff;
+  }
+  
+  .wash-content-box {
+    background-color: #f4f4f4; 
+    padding: 40px;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+  }
+  
+  .wash-description {
+    color: #333333;
+    font-size: 16px;
+    font-family: "Open-sans", sans-serif;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  
+  .wash-points-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .wash-points-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #222222;
+    font-size: 16px;
+    font-family: "Open-sans", sans-serif;
+    font-weight: 500;
+  }
+  
+  .wash-check-icon {
+    color: #111111;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  
+  /* Animation */
+  .animate-zoom-in {
+    animation: zoomFromInside 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+  
+  @keyframes zoomFromInside {
+    from {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Rules */
+  @media (max-width: 850px) {
+    .wash-tabs-header {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .wash-tab-btn {
+      border-radius: 8px;
+    }
+  
+    .wash-content-box {
+      border-radius: 12px;
+      margin-top: 15px;
+      padding: 25px;
+    }
+    
+    .wash-services-heading {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .wash-tabs-header {
+      grid-template-columns: 1fr;
+    }
+  }

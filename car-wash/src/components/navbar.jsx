@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/car-wash-logo-2.png";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 
@@ -18,7 +19,7 @@ function Navbar() {
                 <div className="nav-menu-wrapper">
                 <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
                     <li>
-                        <a href="#" onClick={() => setMenuOpen(false)}>Home</a>
+                        <NavLink to="/home" onClick={() => setMenuOpen(false)}>Home</NavLink>
                     </li>
 
                     <li className={`dropdown ${dropdownOpen ? "dropdown-active" : ""}`}>
@@ -33,16 +34,16 @@ function Navbar() {
                         </a> 
                         
                         <ul className="dropdown-menu">
-                            <li><a href="/" onClick={() => setMenuOpen(false)}>About Us</a></li>
-                            <li><a href="/" onClick={() => setMenuOpen(false)}>Our Team</a></li>
-                            <li><a href="/" onClick={() => setMenuOpen(false)}>FAQ</a></li>
-                            <li><a href="/" onClick={() => setMenuOpen(false)}>Pricing</a></li>
-                            <li><a href="/" onClick={() => setMenuOpen(false)}>Services</a></li>
+                            <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>About Us</NavLink></li>
+                            <li><NavLink to="/team" onClick={() => setMenuOpen(false)}>Our Team</NavLink></li>
+                            <li><NavLink to="/faq" onClick={() => setMenuOpen(false)}>FAQ</NavLink></li>
+                            <li><NavLink to="/pricing" onClick={() => setMenuOpen(false)}>Pricing</NavLink></li>
+                            <li><NavLink to="/services" onClick={() => setMenuOpen(false)}>Services</NavLink></li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="#" onClick={() => setMenuOpen(false)}>Contact Us</a>
+                        <NavLink to="/contact-us" onClick={() => setMenuOpen(false)}>Contact Us</NavLink>
                     </li>
                 </ul>
                 </div>
