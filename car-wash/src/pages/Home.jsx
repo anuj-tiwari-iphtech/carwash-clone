@@ -7,6 +7,7 @@ import HomeContactBanner from "../components/HomePage/HomeContactBanner"
 import ContactSection from "../components/ContactSection"
 import About from "../components/HomePage/HomeAbout"
 import Services from "../components/HomePage/HomeService"
+import TestimonialsSection from "../components/HomePage/HomeTestomonial"
 
 export default function HomePage(){
 
@@ -17,6 +18,7 @@ export default function HomePage(){
         <About/>
         <HeroProcess/>
         <HomeBestServices/>
+        <TestimonialsSection/>
         <Portfolio/>
         <FaqSection/>
         <HomeContactBanner/>

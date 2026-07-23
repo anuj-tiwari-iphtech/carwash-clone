@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "../../Css/teamSection.css";
 
 import t1 from "../../assets/teamSection/ts-1.jpg";
@@ -17,56 +19,32 @@ const teamData = [
   { id: 6, image: t6, name: "Walter Lilly", role: "Wax Wizard" },
 ];
 
-export default function AboutOurTeam({ cardBg = "#ffffff" }) {
-  const [headingVisible, setHeadingVisible] = useState(false);
-  const [cardsVisible, setCardsVisible] = useState(false);
-
-  const headingRef = useRef(null);
-  const gridRef = useRef(null);
-
+export default function TeamSection() {
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setHeadingVisible(entry.isIntersecting),
-      { threshold: 0.3 }
-    );
-
-    if (headingRef.current) observer.observe(headingRef.current);
-
-    return () => {
-      if (headingRef.current) observer.unobserve(headingRef.current);
-    };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setCardsVisible(entry.isIntersecting),
-      { threshold: 0.15 }
-    );
-
-    if (gridRef.current) observer.observe(gridRef.current);
-
-    return () => {
-      if (gridRef.current) observer.unobserve(gridRef.current);
-    };
+    AOS.init({
+      duration: 700,
+      once: false,
+      mirror: true,
+    });
   }, []);
 
   return (
     <section className="team-section">
       <div className="team-container">
-        
-        <div
-          ref={headingRef}
-          className={`team-heading-wrapper ${headingVisible ? "animate-heading" : ""}`}
-        >
+
+        <div className="team-heading-wrapper" data-aos="zoom-in">
           <h2 className="team-main-heading">Our Team</h2>
         </div>
 
-        <div ref={gridRef} className="team-grid">
+        <div className="team-grid">
           {teamData.map((member, index) => (
             <div
               key={member.id}
+              className="team-card"
+              data-aos="zoom-in"
+              data-aos-delay={(index % 3) * 150}
               style={{
-                transitionDelay: `${(index % 3) * 0.15}s`, // ✅ Fixed property name
+                transitionDelay: `${(index % 3) * 0.15}s`, 
                 backgroundColor: "#ffffff" ,
                 borderRadius: "20px",
                 padding: "35px 35px 28px 35px",
@@ -79,20 +57,18 @@ export default function AboutOurTeam({ cardBg = "#ffffff" }) {
                 height:"500px",
                 boxShadow: "0 4px 20px rgba(0, 0, 0, 0.04)"
               }}
-              className={`team-card ${cardsVisible ? "animate-card" : ""}`}
             >
-              <div className="team-image-box"
-                style={{
+              <div className="team-image-box">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="team-card-image"
+                  style={{
                     borderRadius: "24px 24px 20px 20px",
                     overflow: "hidden",
                     width: "100%",
                     height: "400px"
                   }}
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="team-card-image"
                 />
               </div>
               <h3 className="team-member-name">{member.name}</h3>

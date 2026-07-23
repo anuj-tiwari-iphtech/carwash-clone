@@ -1,0 +1,135 @@
+.home-testimonials-section {
+    background-color: #ffffff;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    overflow: hidden;
+  }
+  
+  .home-testimonials-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    gap: 56px;
+    align-items: start;
+  }
+  
+  .home-testimonials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  
+  .home-testimonial-card {
+    max-width: 420px;
+  }
+  
+  .home-testimonial-quote-icon {
+    color: #2e61d4;
+    fill: #2e61d4;
+    transform: rotate(180deg);
+    margin-bottom: 4px;
+  }
+  
+  .home-testimonial-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333333;
+    margin-top: 5px;
+  }
+  
+  .home-testimonial-author {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 25px;
+  }
+  
+  .home-testimonials-heading {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+  
+  .home-testimonials-image-box {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+  
+  .home-testimonials-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+  .home-testimonials-rotate {
+    animation: testimonialsSpin 1.4s ease-in-out;
+  }
+  
+  @keyframes testimonialsSpin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .home-testimonials-section {
+      padding-top: 112px;
+      padding-bottom: 112px;
+    }
+  
+    .home-testimonials-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+  
+    .home-testimonials-heading {
+      font-size: 60px;
+      margin-bottom: 40px;
+    }
+  
+    .home-testimonials-image-box {
+      height: 590px;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .home-testimonials-section {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  
+    .home-testimonials-list {
+      gap: 56px;
+    }
+  
+    .home-testimonial-quote-icon {
+      margin-bottom: 8px;
+    }
+  
+    .home-testimonial-text {
+      font-size: 16px;
+      font-family: "Open-sans", sans-serif;
+    }
+  
+    .home-testimonial-author {
+      font-size: 20px;
+      font-family: Roboto, sans-serif;
+    }
+  
+    .home-testimonials-heading {
+      font-size: 62px;
+      font-family: Roboto, sans-serif;
+    }
+  
+    .home-testimonials-image-box {
+      height: 460px;
+    }
+  }

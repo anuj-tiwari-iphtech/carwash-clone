@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import "../../Css/teamSection.css"
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "../../Css/teamSection.css";
 
 import t1 from "../../assets/teamSection/ts-1.jpg";
 import t2 from "../../assets/teamSection/ts-2.jpg";
@@ -17,51 +19,30 @@ const teamData = [
   { id: 6, image: t6, name: "Walter Lilly", role: "Wax Wizard" },
 ];
 
-export default function TeamMember() {
-  const [headingVisible, setHeadingVisible] = useState(false);
-  const [cardsVisible, setCardsVisible] = useState(false);
-
-  const headingRef = useRef(null);
-  const gridRef = useRef(null);
-
+export default function TeamSection() {
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setHeadingVisible(entry.isIntersecting),
-      { threshold: 0.3 }
-    );
-
-    if (headingRef.current) observer.observe(headingRef.current);
-
-    return () => {
-      if (headingRef.current) observer.unobserve(headingRef.current);
-    };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setCardsVisible(entry.isIntersecting),
-      { threshold: 0.15 }
-    );
-
-    if (gridRef.current) observer.observe(gridRef.current);
-
-    return () => {
-      if (gridRef.current) observer.unobserve(gridRef.current);
-    };
+    AOS.init({
+      duration: 700,
+      once: false,
+      mirror: true,
+    });
   }, []);
 
   return (
-    <section className="team-section" style={{
-        backgroundColor: "#ffffff"
-    }}>
+    <section className="team-section">
       <div className="team-container">
 
-        <div ref={gridRef} className="team-grid">
+        <div className="team-heading-wrapper" data-aos="zoom-in">
+          <h2 className="team-main-heading">Our Team</h2>
+        </div>
+
+        <div className="team-grid">
           {teamData.map((member, index) => (
             <div
               key={member.id}
-              style={{ animationDelay: `${(index % 3) * 0.15}s` }}
-              className={`team-card ${cardsVisible ? "animate-card" : ""}`}
+              className="team-card"
+              data-aos="zoom-in"
+              data-aos-delay={(index % 3) * 150}
             >
               <div className="team-image-box">
                 <img

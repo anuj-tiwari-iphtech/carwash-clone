@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "../Css/bestServices.css";
-
 
 import CardImg1 from "../assets/bestServices/Bp-1.jpg";
 import CardImg2 from "../assets/bestServices/Bp-2.jpg";
@@ -9,132 +10,54 @@ import CardImg4 from "../assets/bestServices/Bp-4.jpg";
 import CardImg5 from "../assets/bestServices/Bp-5.jpg";
 import CardImg6 from "../assets/bestServices/Bp-6.jpg";
 
+const services = [
+  { img: CardImg1, title: "FULL SERVICE WASH", price: "$44" },
+  { img: CardImg2, title: "MANAGER'S SPECIAL WASH", price: "$36" },
+  { img: CardImg3, title: "DELUXE EXTERIOR WASH", price: "$32" },
+  { img: CardImg4, title: "INTERIOR DETAILING", price: "$50" },
+  { img: CardImg5, title: "EXPRESS SHINE WASH", price: "$28" },
+  { img: CardImg6, title: "PREMIUM CERAMIC COAT", price: "$65" },
+];
+
 function BestServices() {
-  const [row1Visible, setRow1Visible] = useState(false);
-  const [row2Visible, setRow2Visible] = useState(false);
-
-  const sectionRef = useRef(null);
-  const row2Ref = useRef(null);
-
   useEffect(() => {
-    const observer1 = new IntersectionObserver(
-      ([entry]) => {
-        setRow1Visible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-  
-    const observer2 = new IntersectionObserver(
-      ([entry]) => {
-        setRow2Visible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-  
-    if (sectionRef.current) observer1.observe(sectionRef.current);
-    if (row2Ref.current) observer2.observe(row2Ref.current);
-  
-    return () => {
-      if (sectionRef.current) observer1.unobserve(sectionRef.current);
-      if (row2Ref.current) observer2.unobserve(row2Ref.current);
-    };
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+    });
   }, []);
 
   return (
-    <section ref={sectionRef} className={`best-services ${row1Visible ? "in-view" : ""}`}>
+    <section className="best-services">
       <div className="services-container">
-        
-        
-        <h2 className="services-title animate-header">
+
+        <h2 className="services-title" data-aos="fade-down">
           Our Best Services You
         </h2>
 
-        
         <div className="cards-grid">
-          
-          
-          <div className="service-card animate-card ">
-            <div className="card-img-box">
-              <img src={CardImg1} alt="FULL SERVICE WASH" />
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="service-card"
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
+            >
+              <div className="card-img-box">
+                <img src={service.img} alt={service.title} />
+              </div>
+              <div className="card-body">
+                <h3>{service.title}</h3>
+                <div className="card-price">{service.price}</div>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p>
+                <button className="learn-btn">LEARN MORE</button>
+              </div>
             </div>
-            <div className="card-body">
-              <h3>FULL SERVICE WASH</h3>
-              <div className="card-price">$44</div>
-              <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-              <button className="learn-btn">LEARN MORE</button>
-            </div>
-          </div>
-
-          
-          <div className="service-card animate-card ">
-            <div className="card-img-box">
-              <img src={CardImg2} alt="MANAGER'S SPECIAL WASH" />
-            </div>
-            <div className="card-body">
-              <h3>MANAGER'S SPECIAL WASH</h3>
-              <div className="card-price">$36</div>
-              <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-              <button className="learn-btn">LEARN MORE</button>
-            </div>
-          </div>
-
-          
-          <div className="service-card animate-card ">
-            <div className="card-img-box">
-              <img src={CardImg3} alt="DELUXE EXTERIOR WASH" />
-            </div>
-            <div className="card-body">
-              <h3>DELUXE EXTERIOR WASH</h3>
-              <div className="card-price">$32</div>
-              <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-              <button className="learn-btn">LEARN MORE</button>
-            </div>
-          </div>
-
-        </div>
-
-        
-        <div ref={row2Ref} className={`cards-grid second-row ${row2Visible ? "threshold-active" : ""}`}>
-          
-          
-          <div className="service-card animate-card-row2 ">
-            <div className="card-img-box">
-              <img src={CardImg4} alt="INTERIOR DETAILING" />
-            </div>
-            <div className="card-body">
-              <h3>INTERIOR DETAILING</h3>
-              <div className="card-price">$50</div>
-              <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-              <button className="learn-btn">LEARN MORE</button>
-            </div>
-          </div>
-
-          
-          <div className="service-card animate-card-row2 ">
-            <div className="card-img-box">
-              <img src={CardImg5} alt="EXPRESS SHINE WASH" />
-            </div>
-            <div className="card-body">
-              <h3>EXPRESS SHINE WASH</h3>
-              <div className="card-price">$28</div>
-              <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-              <button className="learn-btn">LEARN MORE</button>
-            </div>
-          </div>
-
-          
-          <div className="service-card animate-card-row2 ">
-            <div className="card-img-box">
-              <img src={CardImg6} alt="PREMIUM CERAMIC COAT" />
-            </div>
-            <div className="card-body">
-              <h3>PREMIUM CERAMIC COAT</h3>
-              <div className="card-price">$65</div>
-              <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-              <button className="learn-btn">LEARN MORE</button>
-            </div>
-          </div>
-
+          ))}
         </div>
 
       </div>

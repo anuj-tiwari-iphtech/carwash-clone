@@ -1,0 +1,82 @@
+.home-contact-banner-section {
+    background-color: #eeeeee;
+    padding: 90px 20px;
+    overflow: hidden;
+  }
+  
+  .home-contact-banner-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .home-banner-title {
+    color: #000000;
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0;
+    font-family: Ubuntu, sans-serif;
+  
+    opacity: 0;
+    transform: translateX(-120px);
+    transition: transform 0.9s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.9s ease;
+  }
+  
+  .home-contact-banner-section.animate-banner .home-banner-title {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .home-banner-contact-btn {
+    background-color: #3b62d6;
+    color: #ffffff;
+    border: 2px solid #3b62d6;
+    padding: 16px 36px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  
+    opacity: 0;
+    transform: translateX(180px) rotate(-180deg);
+    transition: transform 0.9s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+    transition-delay: 0.15s;
+  }
+  
+  .home-contact-banner-section.animate-banner .home-banner-contact-btn {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+  
+  .home-banner-contact-btn:hover {
+    background-color: #ffffff;
+    border: 2px solid #3b62d6;
+    color: #000;
+  }
+  
+  @media (max-width: 990px) {
+    .home-banner-title {
+      width: 60%;
+      font-size: 42px;
+      padding-left: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .home-contact-banner-container {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 25px;
+    }
+  
+    .home-banner-title {
+      font-size: 30px;
+      padding-bottom: 4px;
+    }
+  }

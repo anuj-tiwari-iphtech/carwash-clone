@@ -1,6 +1,6 @@
 import HeroCard from "./HeroCard";
 import heroImg from "../../assets/bg-2.jpg";
-import "./hero1.css";
+import "./heroCard.css";
 
 export default function Hero() {
   return (
@@ -19,6 +19,7 @@ export default function Hero() {
           />
         </div>
       </div>
+
     </section>
   );
 }
