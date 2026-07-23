@@ -163,45 +163,6 @@
   border-radius: 24px;
 }
 
-/* @media (max-width: 1000px) {
-  .about {
-    padding: 40px 16px;
-  }
-
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 40px;
-  }
-
-  .about-left {
-    width: 100%;
-  }
-
-  .about-left h2 {
-    font-size: 48px;
-    margin-bottom: 15px;
-    max-width: 100;
-  }
-
-  .about-desc {
-    font-size: 16px;
-    margin-bottom: 25px;
-  }
-
-  .about-right {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .about-right img {
-    max-width: 100%;
-    height: 500px;
-  }
-} */
-
-
 @media (max-width: 768px) {
   .about {
     padding: 40px 16px;

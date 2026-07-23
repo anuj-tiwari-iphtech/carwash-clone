@@ -1,0 +1,206 @@
+
+.home-hero-section {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-top: 96px;
+    padding-bottom: 64px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .home-hero-left,
+  .home-hero-right {
+    width: 100%;
+  }
+  
+  .home-hero-image-box {
+    width: 100%;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .home-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .home-hero-card {
+    width: 100%;
+    max-width: 340px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 20px;
+  }
+  
+  .home-hero-welcome {
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #111111;
+    margin-bottom: 16px;
+  }
+  
+  .home-hero-heading {
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .home-hero-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .home-hero-info-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .home-hero-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  
+  .home-hero-address-text {
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+  
+  .home-hero-phone-text {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .home-hero-btn {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 180px;
+    height: 52px;
+    border-radius: 12px;
+    background-color: #2e61d4;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid #2e61d4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .home-hero-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+
+  @media (min-width: 640px) {
+    .home-hero-section {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  
+    .home-hero-image-box {
+      height: 420px;
+    }
+  
+    .home-hero-card {
+      max-width: 380px;
+      padding: 20px;
+    }
+  
+    .home-hero-welcome {
+      font-size: 16px;
+    }
+  
+    .home-hero-heading {
+      font-size: 48px;
+    }
+  
+    .home-hero-address-text,
+    .home-hero-phone-text {
+      font-size: 16px;
+    }
+  }
+  
+  /* ---------- md breakpoint (768px+) ---------- */
+  @media (min-width: 768px) {
+    .home-hero-card {
+      max-width: 400px;
+    }
+  }
+  
+  /* ---------- lg breakpoint (1024px+) ---------- */
+  @media (min-width: 1024px) {
+    .home-hero-section {
+      flex-direction: row;
+      gap: 32px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .home-hero-left,
+    .home-hero-right {
+      width: 50%;
+    }
+  
+    .home-hero-image-box {
+      height: 560px;
+    }
+  
+    .home-hero-card {
+      max-width: 420px;
+      margin-top: 88px; /* lg:mt-22 → 22 * 4px = 88px */
+      padding: 28px;
+    }
+  
+    .home-hero-welcome {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  
+    .home-hero-heading {
+      font-size: 72px;
+      margin-bottom: 24px;
+    }
+  
+    .home-hero-info-list {
+      gap: 20px;
+    }
+  
+    .home-hero-icon {
+      font-size: 22px;
+    }
+  
+    .home-hero-address-text,
+    .home-hero-phone-text {
+      font-size: 18px;
+    }
+  
+    .home-hero-btn {
+      margin-top: 40px;
+      height: 60px;
+    }
+  }
+  
+  /* ---------- xl breakpoint (1280px+) ---------- */
+  @media (min-width: 1280px) {
+    .home-hero-card {
+      max-width: 440px;
+    }
+  }
+  
+  /* ---------- 2xl breakpoint (1536px+) ---------- */
+  @media (min-width: 1536px) {
+    .home-hero-card {
+      max-width: 460px;
+    }
+  }
