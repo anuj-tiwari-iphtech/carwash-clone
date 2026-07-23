@@ -42,11 +42,10 @@ export default function FaqHeader() {
           className="faq-main-image"
         />
 
-        {/* 3. Bottom White Box - Comes from BOTTOM */}
         <div
           className={`faq-badge-box ${isVisible ? "animate-from-bottom" : ""}`}
         >
-          <h1 className="faq-title">FAQ</h1>
+          <h1 className="faqpage-title">FAQ</h1>
           <span className="faq-attribution">
             Image from{" "}
             <a href="https://freepik.com" target="_blank" rel="noreferrer">

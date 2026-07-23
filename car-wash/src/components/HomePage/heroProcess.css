@@ -1,0 +1,137 @@
+.home-process-section {
+    position: relative;
+    background-color: #2e61d4;
+    padding: 70px 20px;
+    padding-bottom: 90px;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .home-process-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .home-process-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  .home-process-header h2 {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+  
+  .home-process-header p {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    color: #dddddd;
+    margin-bottom: 60px;
+    font-style: normal;
+  }
+  
+  
+  .home-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  
+  .home-process-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .home-process-img-box {
+    width: 90px;
+    height: 90px;
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 18px; 
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .home-process-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1); 
+    transition: transform 0.4s ease;
+  }
+  
+  
+  .home-process-card:hover .home-process-img-box {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.08);
+  }
+  
+  
+  .home-process-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+  
+  
+  .home-process-card p {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+    color: #cccccc;
+    line-height: 1.5;
+    max-width: 220px;
+  }
+  
+  
+  
+  @media (max-width: 992px) {
+    .home-process-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+  
+    .home-process-header h2 {
+      font-size: 34px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .home-process-section {
+      padding: 60px 20px;
+    }
+  
+    .home-process-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .home-process-header h2 {
+      font-size: 40px;
+    }
+  
+    .home-process-card h3 {
+      font-size: 25px;
+    }
+  }
