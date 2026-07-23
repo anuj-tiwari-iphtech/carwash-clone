@@ -1,5 +1,6 @@
-import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { ChevronDown } from "lucide-react";
 import { faqContent, faqItems } from "./faqData";
 import "./homeFaq.css";
@@ -7,6 +8,14 @@ import "./homeFaq.css";
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
   const itemRefs = useRef([]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+      mirror: true,
+    });
+  }, []);
 
   const handleToggle = (index) => {
     const isOpening = openIndex !== index;
@@ -27,34 +36,20 @@ export default function FaqSection() {
 
         {/* Heading */}
         <div className="home-faq-heading-box">
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.4 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="home-faq-title"
-          >
+          <h2 className="home-faq-title" data-aos="fade-down">
             {faqContent.heading}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.4 }}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          </h2>
+          <p
             className="home-faq-subtext"
+            data-aos="fade-up"
+            data-aos-delay="150"
           >
             {faqContent.subtext}
-          </motion.p>
+          </p>
         </div>
 
         {/* List */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="home-faq-list"
-        >
+        <div className="home-faq-list" data-aos="fade-up">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
 
@@ -69,32 +64,22 @@ export default function FaqSection() {
                   className="home-faq-question-btn"
                 >
                   <span className="home-faq-question-text">{item.question}</span>
-                  <motion.span
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="home-faq-chevron"
+                  <span
+                    className={`home-faq-chevron ${isOpen ? "home-faq-chevron-open" : ""}`}
                   >
                     <ChevronDown size={22} className="home-faq-chevron-icon" />
-                  </motion.span>
+                  </span>
                 </button>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35, ease: "easeInOut" }}
-                      className="home-faq-answer-collapse"
-                    >
-                      <p className="home-faq-answer-text">{item.answer}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <div
+                  className={`home-faq-answer-collapse ${isOpen ? "home-faq-answer-open" : ""}`}
+                >
+                  <p className="home-faq-answer-text">{item.answer}</p>
+                </div>
               </div>
             );
           })}
-        </motion.div>
+        </div>
 
       </div>
     </section>

@@ -94,7 +94,7 @@
   .aboutpage-btn {
     background-color: #2b60de;
     color: #ffffff;
-    border: none;
+    border: 2px solid #2b60de;
     padding: 25px 38px;
     font-size: 14px;
     font-weight: 700;
@@ -107,8 +107,9 @@
   }
   
   .aboutpage-btn:hover {
-    background-color: #1e4bb8;
-    transform: translateY(-2px);
+    background-color: #ffffff;
+    border: 2px solid #2b60de;
+    color: #000000;
   }
 
   .aboutpage-animate-top {
@@ -155,31 +156,100 @@
       transform: translateX(0);
     }
   }
+
+  @media (max-width: 992px) {
+    .aboutpage-container {
+      max-width: 760px;
+      height: 720px;
+    }
   
-  @media (max-width: 820px) {
+    .aboutpage-blue-bg {
+      right: 28%;
+      width: 68%;
+      height: 620px;
+    }
+  
+    .aboutpage-image-wrapper {
+      top: 50px;
+      right: 18%;
+      width: 88%;
+      height: 520px;
+    }
+  
+    .aboutpage-text-card {
+      top: 42%;
+      left: 46%;
+      width: 58%;
+      padding: 40px 30px;
+    }
+  
+    .aboutpage-heading {
+      font-size: 46px;
+      margin-bottom: 16px;
+    }
+  
+    .aboutpage-description,
+    .aboutpage-source {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  
+    .aboutpage-btn {
+      padding: 18px 32px;
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 720px) {
     .aboutpage-container {
       height: auto;
       display: flex;
       flex-direction: column;
+      padding-top: 20px;
     }
   
-    .aboutpage-blue-bg, 
-    .aboutpage-image-wrapper, 
+    .aboutpage-blue-bg {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      width: 80%;
+      height: 140px;
+      border-radius: 20px;
+      opacity: 1;
+      z-index: 1;
+    }
+  
+    .aboutpage-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      top: 40px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      margin-bottom: -40px;
+    }
+  
     .aboutpage-text-card {
       position: relative;
       width: 100%;
       left: 0;
       right: 0;
       top: 0;
-      bottom: 0;
+      z-index: 3;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      padding: 30px 25px;
+      margin-top: 0;
     }
   
-    .aboutpage-blue-bg {
-      display: none;
+    .aboutpage-heading {
+      font-size: 34px;
     }
   
-    .aboutpage-text-card {
-      margin-top: -30px;
-      padding: 25px;
+    .aboutpage-description,
+    .aboutpage-source {
+      font-size: 15px;
     }
   }

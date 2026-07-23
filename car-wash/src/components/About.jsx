@@ -1,47 +1,34 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import AboutImg from "../assets/services/about.jpg";
 import "../Css/about.css";
 
 function About() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.5 }
-    );
-  
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-  
-    return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
-    };
+    AOS.init({
+      duration: 900,
+      once: false,
+      mirror: true,
+    });
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className={`about ${isVisible ? "in-view" : ""}`}
-    >
+    <section className="about">
       <div className="about-content">
-       
+
         <div className="about-left">
-          <h2 className="animate-top">
+          <h2 data-aos="fade-down">
             Professional washing and cleaning of your car
           </h2>
 
-          <p className="about-desc animate-left">
+          <p className="about-desc" data-aos="fade-left" data-aos-delay="100">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad
             minim veniam.
           </p>
 
-          <div className="about-list animate-left">
+          <div className="about-list" data-aos="fade-left" data-aos-delay="200">
             <div>
               <h3>The Best Car Wash</h3>
               <ul>
@@ -65,15 +52,15 @@ function About() {
             </div>
           </div>
 
-          <h3 className="phone animate-left">
+          <h3 className="phone" data-aos="fade-left" data-aos-delay="300">
             Call for book: <span>8-800-10-500</span>
           </h3>
         </div>
 
-       
-        <div className="about-right animate-right">
+        <div className="about-right" data-aos="fade-right">
           <img src={AboutImg} alt="Car Wash Professional" />
         </div>
+
       </div>
     </section>
   );

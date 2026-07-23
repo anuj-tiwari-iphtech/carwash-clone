@@ -1,8 +1,8 @@
-/* Container & Background */
 .homepage-services {
-    background-color: #ffffff; /* Updated to pure white */
-    color: #222222; /* Changed text color so it remains visible against white */
-    padding: 110px 150px;
+    background-color: #ffffff; 
+    color: #222222; 
+    padding: 0px 150px;
+    padding-bottom: 50px;
   }
   
   .homepage-services__grid {
@@ -13,25 +13,24 @@
     margin: 0 auto;
   }
   
-  /* Service Card */
+
   .homepage-services__card {
-    text-align: center;
+    text-align: left;
   }
   
-  /* Icon Box & Dimensions Control */
+
   .homepage-services__icon-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
   }
   
   .homepage-services__icon {
-    /* Control icon width and height directly */
     width: 75px;
     height: 75px;
     object-fit: contain;
-    filter: brightness(0);
+    filter: brightness(0) invert(1) brightness(0.73);
   }
   
   /* AOS Animation for Icon */
@@ -46,9 +45,9 @@
     transform: rotate(0deg);
   }
   
-  /* Typography */
   .homepage-services__title {
     font-size: 20px;
+    text-align: left;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 15px;
     font-weight: 600;
@@ -58,6 +57,7 @@
   
   .homepage-services__description {
     font-size: 16px;
+    text-align: left;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #555555;
@@ -80,7 +80,6 @@
       gap: 50px;
     }
   }
-  
   @media (max-width: 768px) {
     .homepage-services {
       padding: 60px 20px;
@@ -92,8 +91,14 @@
     }
   
     .homepage-services__card {
-      max-width: 280px;
-      margin: 0 auto;
+      max-width: 100%;
+      margin: 0;
+      text-align: left;   /* Left align text */
+    }
+  
+    .homepage-services__icon-wrapper {
+      justify-content: flex-start;  /* Move icon to left */
+      margin-bottom: 15px;
     }
   
     .homepage-services__icon {
@@ -103,9 +108,11 @@
   
     .homepage-services__title {
       font-size: 18px;
+      text-align: left;
     }
   
     .homepage-services__description {
       font-size: 14px;
+      text-align: left;
     }
   }

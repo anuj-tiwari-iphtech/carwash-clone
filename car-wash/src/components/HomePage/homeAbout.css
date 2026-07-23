@@ -1,4 +1,3 @@
-/* Container & Section */
 .homepage-about {
     background-color: #ffffff;
     padding: 60px 20px;
@@ -155,8 +154,39 @@
     font-weight: 600;
     margin-left: 6px;
   }
+
+  @media (max-width: 990px) {
+    .homepage-about__container {
+      flex-direction: column;
+      gap: 40px;
+    }
   
-  /* ================= MEDIA QUERIES ================= */
+    .homepage-about__content {
+      width: 100%;
+      order: 2;
+    }
+  
+    .homepage-about__image-wrapper {
+      width: 100%;
+      justify-content: center;
+      order: 1; /* Image comes below the content */
+    }
+  
+    .homepage-about__image {
+      max-width: 100%;
+      height: 500px;
+    }
+  
+    .homepage-about__heading {
+      font-size: 36px;
+    }
+  
+    .homepage-about__services-grid {
+      gap: 30px;
+    }
+  }
+  
+
   @media (max-width: 768px) {
     .homepage-about {
       padding: 40px 16px;

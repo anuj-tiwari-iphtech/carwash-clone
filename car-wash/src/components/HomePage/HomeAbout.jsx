@@ -29,7 +29,6 @@ function About() {
       className={`homepage-about ${isVisible ? "homepage-about--in-view" : ""}`}
     >
       <div className="homepage-about__container">
-        {/* ================= LEFT SIDE: IMAGE ================= */}
         <div className="homepage-about__image-wrapper homepage-about__animate-left">
           <img
             src={AboutImg}
@@ -38,7 +37,6 @@ function About() {
           />
         </div>
 
-        {/* ================= RIGHT SIDE: TEXT CONTENT ================= */}
         <div className="homepage-about__content">
           <h2 className="homepage-about__heading homepage-about__animate-top">
             Professional washing and cleaning of your car

@@ -1,178 +1,191 @@
 .why-us-section {
-    width: 100%;
-    padding: 80px 20px;
-    background-color: #f3f3f3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  width: 100%;
+  padding: 80px 20px;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.why-us-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Heading */
+
+.why-us-heading {
+  font-size: 65px;
+  font-weight: 550;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+/* Content */
+
+.why-us-content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.why-us-column {
+  width: 100%;
+}
+
+.column-title {
+  font-size: 20px;
+  font-weight: 550;
+  font-family: Roboto, sans-serif;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #444;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.check-icon {
+  color: #e06d53;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Cards */
+
+.why-us-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card-wrapper {
+  width: 100%;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 45px 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 800;
+  font-family: Roboto, sans-serif;
+  color: #2b60de;
+  margin: 0 0 20px;
+}
+
+.stat-label {
+  font-size: 20px;
+  font-weight: 550;
+  font-family: Roboto, sans-serif;
+  color: #111;
+  margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .why-us-heading {
+    font-size: 54px;
   }
-  
-  .why-us-container {
-    width: 100%;
-    max-width: 1100px;
+
+  .why-us-content-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: start;
+  }
+
+  .why-us-column {
+    text-align: left;
+  }
+
+  .column-title {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .feature-list {
+    text-align: left;
+  }
+
+  .feature-list li {
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .why-us-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .stat-card {
+    padding: 40px 25px;
+  }
+}
+/* Mobile */
+
+@media (max-width: 600px) {
+  .why-us-section {
+    padding: 60px 15px;
   }
 
   .why-us-heading {
-    font-size: 65px;
-    font-weight: 550;
-    font-family: Roboto, sans-serif;
-    text-align: center;
-    color: #000000;
-    margin-bottom: 50px;
-    opacity: 0;
+    font-size: 34px;
+    margin-bottom: 35px;
   }
-  
-  .why-us-content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 60px;
-  }
-  
-  .why-us-column {
-    opacity: 0;
-  }
-  
+
   .column-title {
-    font-size: 20px;
-    font-weight: 550;
-    font-family: Roboto, sans-serif;
-    color: #000000;
-    margin-bottom: 20px;
+    font-size: 18px;
   }
-  
-  .feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
+
   .feature-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    font-family: "Open-sans", sans-serif;
-    color: #444444;
-    margin-bottom: 4px;
+    font-size: 15px;
   }
-  
-  .check-icon {
-    color: #e06d53; 
-    font-size: 0.85rem;
-    flex-shrink: 0;
-  }
-  
 
   .why-us-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    perspective: 1000px; 
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  
-  .stat-card-wrapper {
-    opacity: 0;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-  }
-  
-  .stat-card {
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 45px 30px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  }
-  
-  .stat-number {
-    font-size: 36px;
-    font-weight: 800;
-    font-family: Roboto, sans-serif;
-    color: #2b60de;
-    margin: 0 0 20px 0;
-  }
-  
-  .stat-label {
-    font-size: 20px;
-    font-weight: 550;
-    font-family: Roboto, sans-serif;
-    color: #111111;
-    margin: 0;
-  }
-  
-  .animate-zoom-in {
-    animation: zoomIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  }
-  
-  @keyframes zoomIn {
-    from {
-      opacity: 0;
-      transform: scale(0.3);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  .animate-slide-right {
-    animation: slideRight 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  }
-  
-  .delay-right {
-    animation-delay: 0.2s;
-  }
-  
-  @keyframes slideRight {
-    from {
-      opacity: 0;
-      transform: translateX(120px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* 180 Degree Flip for Cards */
-  .animate-flip {
-    animation: flipCard 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  }
-  
-  @keyframes flipCard {
-    from {
-      opacity: 0;
-      transform: rotateX(180deg);
-    }
-    to {
-      opacity: 1;
-      transform: rotateX(0deg);
-    }
-  }
-  
 
-  @media (max-width: 900px) {
-    .why-us-cards-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .stat-card {
+    padding: 35px 20px;
   }
-  
-  @media (max-width: 600px) {
-    .why-us-content-grid {
-      grid-template-columns: 1fr;
-    }
-    .why-us-cards-grid {
-      grid-template-columns: 1fr;
-    }
-    .why-us-heading {
-      font-size: 2.2rem;
-    }
+
+  .stat-number {
+    font-size: 30px;
   }
+
+  .stat-label {
+    font-size: 18px;
+  }
+}
