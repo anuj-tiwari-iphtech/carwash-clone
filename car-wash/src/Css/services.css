@@ -12,12 +12,11 @@
 }
 
 .Service-Icon{
-    font-size:65px;
-    margin-bottom:10px;
-    width: 70px;
-    height: 70px;
-    object-fit: contain; 
-
+  font-size:65px;
+  margin-bottom:10px;
+  width: 70px;
+  height: 70px;
+  object-fit: contain; 
 }
 
 [data-aos="icon-flip"] {

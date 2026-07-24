@@ -99,7 +99,7 @@ header {
 }
 
 .dropdown-menu li a {
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-size: 14px;
     font-weight: 500;
     display: block;
@@ -190,8 +190,6 @@ header {
       text-align: left;
       transition: background 0.3s;
     }
-  
-
   
     .overlay {
       position: fixed;

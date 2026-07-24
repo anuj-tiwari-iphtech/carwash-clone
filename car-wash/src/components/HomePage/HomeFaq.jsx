@@ -34,7 +34,6 @@ export default function FaqSection() {
     <section id="faq" className="home-faq-section">
       <div className="home-faq-container">
 
-        {/* Heading */}
         <div className="home-faq-heading-box">
           <h2 className="home-faq-title" data-aos="fade-down">
             {faqContent.heading}
@@ -48,7 +47,6 @@ export default function FaqSection() {
           </p>
         </div>
 
-        {/* List */}
         <div className="home-faq-list" data-aos="fade-up">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;

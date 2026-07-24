@@ -168,7 +168,6 @@
     }
   }
 }
-
 @media (max-width: 576px) {
   .contact-section {
     padding: 50px 20px;
@@ -180,5 +179,23 @@
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .info-card {
+    max-width: 100%;
+    padding: 18px 16px;
+  }
+
+  .info-header h3 {
+    font-size: 16px;
+  }
+
+  .info-card p {
+    font-size: 13px;
   }
 }

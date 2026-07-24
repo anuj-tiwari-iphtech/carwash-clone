@@ -67,16 +67,25 @@
     }
   }
 
-  @media (max-width: 768px) {
-    .home-contact-banner-container {
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-      gap: 25px;
-    }
   
-    .home-banner-title {
-      font-size: 30px;
-      padding-bottom: 4px;
-    }
+@media (max-width: 768px) {
+  .home-contact-banner-container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 25px;
   }
+
+  .home-banner-title {
+    width: 100%;        /* was inheriting 60% */
+    padding-left: 0;     /* was inheriting 40px */
+    font-size: 30px;
+    padding-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  .home-banner-contact-btn {
+    width: 60%;
+    text-align: center;
+  }
+}

@@ -36,7 +36,6 @@ export default function TestimonialsSection() {
     <section id="testimonials" className="home-testimonials-section">
       <div className="home-testimonials-container">
 
-        {/* Left: Testimonial list */}
         <div className="home-testimonials-list">
           {testimonialsData.map((item, index) => (
             <div
@@ -52,7 +51,6 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        {/* Right: Heading + Image */}
         <div>
           <h2 className="home-testimonials-heading" data-aos="fade-left">
             Testimonials
