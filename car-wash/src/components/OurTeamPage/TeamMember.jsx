@@ -33,7 +33,7 @@ export default function TeamSection() {
       <div className="team-container">
 
         <div className="team-heading-wrapper" data-aos="zoom-in">
-          <h2 className="team-main-heading">Our Team</h2>
+          {/* <h2 className="team-main-heading">Our Team</h2> */}
         </div>
 
         <div className="team-grid">

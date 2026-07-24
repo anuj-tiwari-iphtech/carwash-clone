@@ -12,7 +12,7 @@ export default function PricingHeader() {
         if (entry.isIntersecting) {
           setIsVisible(true);
         } else {
-          setIsVisible(false); // Reset on scroll out
+          setIsVisible(false); 
         }
       },
       { threshold: 0.2 }
@@ -27,15 +27,12 @@ export default function PricingHeader() {
 
   return (
     <div ref={containerRef} className="pricing-header-wrapper">
-      {/* 3D Perspective Container for Flip Animation */}
       <div className="pricing-flip-container">
         
-        {/* Background Card flips 180 degrees on Y axis */}
         <div
           className={`pricing-bg-card ${isVisible ? "animate-flip-y" : ""}`}
         ></div>
 
-        {/* Foreground Image comes from bottom and scales up */}
         <div
           className={`pricing-img-card ${isVisible ? "animate-bottom-scale" : ""}`}
         >

@@ -40,8 +40,6 @@
     font-family: "Open-sans", sans-serif;
     border-radius: 12px 12px 0 0;
     cursor: pointer;
-    transition: all 0.25s ease;
-    font-family: inherit;
   }
   
   .wash-tab-btn:hover {

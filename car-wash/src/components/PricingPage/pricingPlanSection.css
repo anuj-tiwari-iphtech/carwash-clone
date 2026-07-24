@@ -91,7 +91,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  white-space: nowrap;   /* Keeps each feature on one line */
+  white-space: nowrap;  
 }
 
 .pricing-page-checkmark {
@@ -113,8 +113,6 @@
   letter-spacing: 0.5px;
   transition: background-color 0.25s ease, transform 0.2s ease;
 }
-
-
 
 .pricing-page-plan-buy-btn:hover {
   background-color: #ffffff;

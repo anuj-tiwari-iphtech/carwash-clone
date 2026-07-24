@@ -232,4 +232,26 @@
     .contactpage__form-row {
       grid-template-columns: 1fr;
     }
+
+    .contactpage__info-card {
+      padding: 18px 16px;
+    }
+  
+    .contactpage__info-title {
+      font-size: 16px;
+    }
+  
+    .contactpage__info-text {
+      font-size: 13px;
+    }
+  
+  
+    .contactpage__info-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .contactpage__info-card {
+      max-width: 100%;
+    }
   }

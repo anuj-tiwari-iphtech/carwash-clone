@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaCheck } from "react-icons/fa";
 import "./carWashServices.css";
 
-// 4 Services Tab Data
 const servicesData = [
   {
     id: "full-services",
@@ -92,12 +91,10 @@ export default function CarWashServices() {
     <section ref={sectionRef} className="wash-services-section">
       <div className="wash-services-container">
         
-        {/* Main Heading Zoom Animation */}
         <h2 className={`wash-services-heading ${isVisible ? "animate-zoom-in" : ""}`}>
           Car Wash Services
         </h2>
 
-        {/* Tab Buttons */}
         <div className="wash-tabs-header">
           {servicesData.map((service) => (
             <button
@@ -110,7 +107,6 @@ export default function CarWashServices() {
           ))}
         </div>
 
-        {/* Dynamic Below Content Card */}
         <div className="wash-content-box">
           <p className="wash-description">{currentService.description}</p>
 

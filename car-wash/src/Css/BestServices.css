@@ -36,11 +36,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-}
-
 .card-img-box {
   width: 100%;
   height: 220px;
@@ -89,7 +84,7 @@
 .learn-btn {
   background-color: #3b62d6;
   color: #ffffff;
-  border: none;
+  border: 2px solid transparent;
   padding: 12px 36px;
   font-size: 12px;
   font-weight: 700;

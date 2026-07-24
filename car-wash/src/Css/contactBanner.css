@@ -86,7 +86,14 @@
   }
 
   .banner-title {
+    width: 100%;      
     font-size: 30px;
-    padding-bottom: 4px;
+    padding: 0;        
+    line-height: 1.3;
+  }
+
+  .banner-contact-btn {
+    width: 65%;
+    text-align: left;
   }
 }
